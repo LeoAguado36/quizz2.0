@@ -1,0 +1,131 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente predeterminada */
+    background-color: #f4f4f4; /* Color de fondo gris claro */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura de la ventana */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    height: 108vh; /* Altura de la ventana */
+    overflow-y: scroll; /* Siempre muestra la barra de desplazamiento vertical */
+}
+
+img {
+    max-width: 50%; /* Ancho máximo para imágenes */
+    max-height: 50%; /* Altura máxima para imágenes */
+}
+
+.menu-container, .quiz-container {
+    text-align: center; /* Centra el texto */
+    width: 80%; /* Aumenta el ancho de los contenedores */
+    max-width: 700px; /* Máximo ancho más grande */
+    padding: 40px; /* Más espacio interno */
+    border-radius: 10px; /* Bordes más redondeados */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
+}
+
+h1, h2 {
+    font-size: 3.5em; /* Título más grande */
+    margin-bottom: 30px; /* Espacio debajo del título */
+}
+
+.buttons-container {
+    display: flex; /* Utiliza flexbox para los botones */
+    flex-direction: column; /* Coloca los botones en columna */
+    align-items: center; /* Centra los botones */
+}
+
+/* Estilos para botones */
+button {
+    background-color: #72ff77; /* Verde estándar */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 20px 40px; /* Más grande */
+    cursor: pointer; /* Cursor de mano al pasar por el botón */
+    border-radius: 15px; /* Bordes más redondeados */
+    font-size: 1.5em; /* Texto más grande */
+    margin: 15px; /* Más espacio entre botones */
+    width: 80%; /* Botones más anchos */
+    transition: background-color 0.2s, transform 0.3s; /* Transiciones suavizadas */
+}
+
+button:hover {
+    background-color: #1afc21; /* Oscurece al pasar el ratón */
+    transform: scale(1.05); /* Efecto de crecimiento */
+}
+
+/* Colores específicos para botones del menú */
+.menu-container .leoye { background-color: #f44336; } /* Botón de leoye en rojo */
+.menu-container .quimica { background-color: #e91e63; } /* Botón de química en rosa */
+.menu-container .ingles { background-color: #9c27b0; } /* Botón de inglés en morado */
+.menu-container .algebra { background-color: #3f51b5; } /* Botón de álgebra en azul */
+.menu-container .logica { background-color: #2196f3; } /* Botón de lógica en azul claro */
+.menu-container .tics { background-color: #4caf50; } /* Botón de TICS en verde */
+
+/* Botón Enviar en estado inicial y activo */
+.quiz-container .submit-button {
+    background-color: #d4edda; /* Verde muy claro inicialmente */
+    color: white; /* Texto blanco */
+    display: none; /* Oculto inicialmente */
+}
+
+.quiz-container .submit-button.active {
+    background-color: #00b21e; /* Verde sólido cuando activo */
+}
+
+/* Estilos para las opciones de respuesta */
+.answers {
+    text-align: left; /* Alinea el texto a la izquierda */
+    font-size: 1.5em; /* Aumenta tamaño de la letra */
+    margin-top: 20px; /* Espacio arriba de las respuestas */
+}
+
+.answers label {
+    display: block; /* Asegura que las opciones sean bloques verticales */
+    margin: 10px 0; /* Espacio entre las opciones */
+    padding: 15px; /* Espacio interno en las opciones */
+    cursor: pointer; /* Cursor de mano al pasar por la opción */
+}
+
+/* Estilo para el input radio */
+.answers input[type="radio"] {
+    margin-right: 10px; /* Espacio a la derecha del input */
+}
+
+/* Modal y feedback estilos */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1000; /* Alta prioridad en la superposición */
+    left: 0; /* Posición a la izquierda */
+    top: 0; /* Posición en la parte superior */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente negro */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco */
+    padding: 30px; /* Espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25); /* Sombra alrededor del contenido */
+    width: 90%; /* Ancho del 90% */
+    max-width: 600px; /* Ancho máximo de 600px */
+}
+
+.close {
+    color: #aaa; /* Color gris claro */
+    font-size: 28px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita */
+    float: right; /* Alinea a la derecha */
+    cursor: pointer; /* Cursor de mano al pasar por la "x" */
+}
+
+.close:hover {
+    color: #000; /* Color negro al pasar el ratón */
+}

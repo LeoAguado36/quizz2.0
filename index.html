@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Configuración del juego de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración para un diseño responsivo -->
+    <title>Quiz</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="style.css"> <!-- Vinculación al archivo de estilos CSS -->
+</head>
+<body>
+    <!-- Contenedor del menú -->
+    <div class="menu-container">
+        <h1>Quiz</h1> <!-- Título del menú -->
+        <div class="buttons-container">
+            <!-- Botones de cada materia -->
+            <button class="leoye" onclick="loadQuiz('leoye')">Leoye</button> <!-- Botón para Leoye -->
+            <button class="quimica" onclick="loadQuiz('quimica')">Química</button> <!-- Botón para Química -->
+            <button class="ingles" onclick="loadQuiz('ingles')">Inglés</button> <!-- Botón para Inglés -->
+            <button class="algebra" onclick="loadQuiz('algebra')">Álgebra</button> <!-- Botón para Álgebra -->
+            <button class="logica" onclick="loadQuiz('logica')">Lógica</button> <!-- Botón para Lógica -->
+            <button class="tics" onclick="loadQuiz('tics')">TICs</button> <!-- Botón para TICs -->
+        </div>
+    </div>
+    
+    <!-- Contenedor del cuestionario -->
+    <div class="quiz-container" style="display: none;"> <!-- Inicialmente oculto -->
+        <div id="quiz"></div> <!-- Contenedor para las preguntas -->
+        <div class="buttons">
+            <button id="next" class="next-button" disabled>Siguiente</button> <!-- Botón "Siguiente" deshabilitado por defecto -->
+            <button id="submit" class="submit-button" style="display: none;">Enviar Respuestas</button> <!-- Botón "Enviar Respuestas" oculto por defecto -->
+        </div>
+        <div id="feedback" style="display: none;"></div> <!-- Contenedor para la retroalimentación, inicialmente oculto -->
+    </div>
+    
+    <!-- Contenedor del modal de resultados -->
+    <div id="results-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span> <!-- Botón para cerrar el modal -->
+            <p id="results"></p> <!-- Contenedor para mostrar los resultados -->
+            <button id="restart" class="restart-button">Reiniciar Quiz</button> <!-- Botón para reiniciar el cuestionario -->
+            <button id="menu" class="menu-button">Ir al Menú</button> <!-- Botón para regresar al menú -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script> <!-- Vinculación al archivo de script JavaScript -->
+</body>
+</html>
